@@ -154,9 +154,12 @@
 				url: 'process.php',
 				type: 'post',
 				data: 
-					{newusername:username, 
-						newemail:email, 
-						newpassword:password
+					{newid_number:id_number, 
+						newfirst_name:first_name, 
+						newmiddle_name:middle_name,
+						newlast_name:newlast_name,
+						newmobile_number:mobile_number,
+						newdate_or_birth:date_of_birth,
 					},
 				success: function(response){
 					$('#message').html(response);
