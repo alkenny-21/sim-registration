@@ -148,29 +148,23 @@
 			
 			
 			
-			if(username == ''){ // check username not empty
-				alert('please enter username !!'); 
-			}
-			else if(!/^[a-z A-Z]+$/.test(name)){ // check username allowed capital and small letters 
-				alert('username only capital and small letters are allowed !!'); 
-			}
-			} 
-			else{			
-				$.ajax({
-					url: 'process.php',
-					type: 'post',
-					data: 
-						{newusername:username, 
-						 newemail:email, 
-						 newpassword:password
-						},
-					success: function(response){
-						$('#message').html(response);
-					}
-				});
+			
+					
+			$.ajax({
+				url: 'process.php',
+				type: 'post',
+				data: 
+					{newusername:username, 
+						newemail:email, 
+						newpassword:password
+					},
+				success: function(response){
+					$('#message').html(response);
+				}
+			});
 				
 				$('#registraion_form')[0].reset();
-			}
+			
 		});
 
 	</script>
